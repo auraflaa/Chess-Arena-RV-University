@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Arena - RV University Chess Club</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter and Cinzel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* NEW: Custom font class for the title */
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Style for scroll-in animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Hero Section Animations --- */
+        .hero-title {
+            animation: fadeInScaleUp 1.2s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+        }
+
+        .hero-text {
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.8s forwards;
+        }
+
+        @keyframes fadeInScaleUp {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- =========== Header =========== -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Club Logo and Name - UPDATED LOGO LINK -->
+            <a href="#home" class="flex items-center space-x-3">
+                <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/The%20logo.jpg" alt="Chess Arena Logo" class="h-10 w-10 rounded-full object-cover">
+                <span class="text-xl font-bold text-white">Chess Arena</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
+                <a href="#events" class="text-gray-300 hover:text-white transition duration-300">Events</a>
+                <a href="#join" class="text-gray-300 hover:text-white transition duration-300">Join Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#home" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="#about" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="#events" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Events</a>
+            <a href="#join" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Join Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Hero Section =========== -->
+        <section id="home" class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-12 px-6 text-center overflow-hidden">
+            
+            <!-- Blurred Background Layer - UPDATED BANNER LINK -->
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-lg scale-110" style="background-image: url('https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/The%20banner.png');"></div>
+            
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 w-full h-full bg-gray-900/60"></div>
+
+            <!-- Content Layer -->
+            <div class="relative z-10 flex flex-col justify-center items-center h-full">
+                <!-- Main Title with Animation and new Font -->
+                <h1 class="text-5xl md:text-8xl font-bold text-white hero-title font-cinzel tracking-wider" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
+                    Chess Arena
+                </h1>
+
+                <!-- Hero Text Content with Animation -->
+                <div class="hero-text">
+                     <p class="text-lg md:text-2xl text-gray-200 mt-6 mb-8 max-w-3xl mx-auto">The Official Chess Club of RV University. Sharpen Your Mind, Make Your Move.</p>
+                     <a href="#about" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-full hover:bg-amber-600 transition-transform duration-300 hover:scale-105 text-lg">
+                        Explore The Club
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== About Us Section =========== -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Who We Are</h2>
+                    <p class="text-amber-500 mt-2">Our Mission & Activities</p>
+                </div>
+                <div class="max-w-4xl mx-auto text-center mb-16 reveal">
+                    <p class="text-lg text-gray-400">
+                        To foster a vibrant and inclusive community for chess lovers at RVU, promoting strategic thinking, friendly competition, and a lifelong passion for the game.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Feature 1 -->
+                    <div class="bg-gray-900 p-8 rounded-lg reveal">
+                        <div class="flex justify-center mb-4">
+                            <div class="bg-amber-500/10 p-4 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-2 text-amber-500 h-8 w-8"><path d="M14 19a6 6 0 0 0-12 0"/><circle cx="8" cy="9" r="4"/><path d="M22 19a6 6 0 0 0-6-6 4 4 0 1 0 0-8"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Meetups & Casual Play</h3>
+                        <p class="text-gray-400">Join our sessions to play, learn, and connect with fellow enthusiasts.</p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-gray-900 p-8 rounded-lg reveal">
+                        <div class="flex justify-center mb-4">
+                           <div class="bg-amber-500/10 p-4 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy text-amber-500 h-8 w-8"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Tournaments & Series</h3>
+                        <p class="text-gray-400">Test your skills in our exciting blitz, rapid, and classical tournaments.</p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-gray-900 p-8 rounded-lg reveal">
+                        <div class="flex justify-center mb-4">
+                           <div class="bg-amber-500/10 p-4 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-circuit text-amber-500 h-8 w-8"><path d="M12 5a3 3 0 1 0-5.993.142"/><path d="M18 5a3 3 0 1 0-5.993.142"/><path d="M12 12a3 3 0 1 0-5.993.142"/><path d="M18 12a3 3 0 1 0-5.993.142"/><path d="M12 19a3 3 0 1 0-5.993.142"/><path d="M18 19a3 3 0 1 0-5.993.142"/><path d="M12 5a3 3 0 0 0 0 6"/><path d="M18 5a3 3 0 0 0 0 6"/><path d="M12 12a3 3 0 0 0 0 6"/><path d="M18 12a3 3 0 0 0 0 6"/><path d="m12 21 1-2"/><path d="m18 21 1-2"/><path d="m6 21-1-2"/><path d="m12 14-1-2"/><path d="m18 14-1-2"/><path d="m6 14 1-2"/><path d="M12 8V7"/><path d="M18 8V7"/><path d="M6 8V7"/></svg>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Workshops & Learning</h3>
+                        <p class="text-gray-400">Improve your game with workshops on openings, endgames, and strategy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Events Section (REVAMPED) =========== -->
+        <section id="events" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Club Happenings</h2>
+                    <p class="text-amber-500 mt-2">Our Main Event Series & More</p>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center reveal">Upcoming Events</h3>
+                    <div class="max-w-md mx-auto bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col border border-amber-500/50 shadow-lg shadow-amber-500/10">
+                        <div class="p-6 flex-grow">
+                            <p class="text-amber-500 text-sm font-semibold">COMING SOON</p>
+                            <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 4.0</h4>
+                            <p class="text-gray-400 mt-2">The legendary series returns. Stay tuned for your next chance to challenge the boss!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Events -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center reveal">Past Events</h3>
+                    
+                    <!-- Beat The Boss Saga -->
+                    <div class="mb-16">
+                        <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">The 'Beat The Boss' Saga</h4>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <!-- Event Card: BTB 3.0 -->
+                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                <div class="p-6 flex-grow">
+                                    <p class="text-amber-500 text-sm font-semibold">3rd FEB 2025</p>
+                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 3.0</h4>
+                                    <p class="text-gray-400 mt-2">The ultimate chess challenge where challengers attempted to outsmart the master.</p>
+                                </div>
+                                <div class="p-6 pt-0 mt-auto">
+                                    <a href="https://www.instagram.com/p/DF-cscstNu2/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                </div>
+                            </div>
+                            <!-- Event Card: BTB 2.0 -->
+                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                <div class="p-6 flex-grow">
+                                    <p class="text-amber-500 text-sm font-semibold">12th AUG 2024</p>
+                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 2.0</h4>
+                                    <p class="text-gray-400 mt-2">The second installment of our thrilling simultaneous chess exhibition.</p>
+                                </div>
+                                <div class="p-6 pt-0 mt-auto">
+                                    <a href="https://www.instagram.com/p/C-ktX3mylgl/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                </div>
+                            </div>
+                            <!-- Event Card: BTB 1.0 -->
+                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                <div class="p-6 flex-grow">
+                                    <p class="text-amber-500 text-sm font-semibold">7th FEB 2024</p>
+                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss</h4>
+                                    <p class="text-gray-400 mt-2">Where it all began! The first-ever edition of our main event series.</p>
+                                </div>
+                                 <div class="p-6 pt-0 mt-auto">
+                                    <a href="https://www.instagram.com/p/C8JSzn-IXm3/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Past Events -->
+                    <div>
+                        <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">Other Highlights</h4>
+                         <div class="max-w-md mx-auto bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col">
+                            <div class="p-6 flex-grow">
+                                <p class="text-amber-500 text-sm font-semibold">OCTOBER 2024</p>
+                                <h4 class="text-xl font-bold text-white mt-2">Intra Sports - Chess</h4>
+                                <p class="text-gray-400 mt-2">Chess Arena proudly handled the chess tournament for RV University's intra-sports competition.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Why Join Us Section =========== -->
+        <section id="join" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Why Join Chess Arena?</h2>
+                    <p class="text-amber-500 mt-2">The Perks of Being a Member</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
+                        <h3 class="text-xl font-bold text-white mb-2">All Levels Welcome</h3>
+                        <p class="text-gray-400">From Grandmaster in the making to your very first game, we have a place for you.</p>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
+                        <h3 class="text-xl font-bold text-white mb-2">Compete & Grow</h3>
+                        <p class="text-gray-400">Compete in internal tournaments and get a chance to represent RV University at state & national events.</p>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
+                        <h3 class="text-xl font-bold text-white mb-2">Learn from the Best</h3>
+                        <p class="text-gray-400">Participate in workshops and analysis sessions led by experienced players.</p>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
+                        <h3 class="text-xl font-bold text-white mb-2">Join the Community</h3>
+                        <p class="text-gray-400">Meet new friends, find practice partners, and be part of a thriving campus club.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========== Footer / CTA Section (FORM LINK UPDATED) =========== -->
+        <footer class="bg-gray-800">
+            <div class="container mx-auto px-6 py-12 text-center">
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold text-white">Ready to Make Your Move?</h2>
+                    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Become a member of Chess Arena today. Click the button below to fill out our registration form and join the community!</p>
+                    <div class="mt-8">
+                        <!-- Google Form Link Updated -->
+                        <a href="https://forms.gle/qw2YU9icgM6jnT9X8" target="_blank" rel="noopener noreferrer" class="bg-amber-500 text-white font-bold py-4 px-10 rounded-full hover:bg-amber-600 transition duration-300 text-lg">
+                            Join Us Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-gray-500 mb-4 sm:mb-0">&copy; 2025 Chess Arena - RV University. All Rights Reserved.</p>
+                    <div class="flex space-x-6">
+                        <!-- Social Media Links Updated -->
+                        <a href="https://www.instagram.com/chess_arena.rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/chess-arena-rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="mailto:chessarena.rv@gmail.com" class="text-gray-400 hover:text-white transition">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Event Details Modal -->
+    <div id="event-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
+        <div id="event-modal-content" class="bg-gray-800 rounded-lg p-8 max-w-md w-full relative transform transition-all duration-300 scale-95 opacity-0">
+            <button id="event-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h3 id="event-modal-title" class="text-2xl font-bold text-white mb-4">Event Title</h3>
+            <p id="event-modal-details" class="text-gray-300">Event details go here.</p>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // --- Event Modal Logic ---
+            const modal = document.getElementById('event-modal');
+            const modalContent = document.getElementById('event-modal-content');
+            const modalCloseButton = document.getElementById('event-modal-close');
+            const modalTitle = document.getElementById('event-modal-title');
+            const modalDetails = document.getElementById('event-modal-details');
+            
+            document.querySelectorAll('.event-modal-trigger').forEach(button => {
+                button.addEventListener('click', () => {
+                    const title = button.getAttribute('data-title');
+                    const details = button.getAttribute('data-details');
+                    
+                    modalTitle.textContent = title;
+                    modalDetails.textContent = details;
+                    
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                    setTimeout(() => {
+                        modalContent.classList.remove('scale-95', 'opacity-0');
+                    }, 50); // Small delay for transition
+                });
+            });
+
+            function closeModal() {
+                modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                }, 300); // Match transition duration
+            }
+
+            modalCloseButton.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // --- Intersection Observer for Scroll Animations ---
+            const revealElements = document.querySelectorAll('.reveal');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Optional: unobserve after revealing
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
