@@ -18,7 +18,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* NEW: Custom font class for the title */
         .font-cinzel {
             font-family: 'Cinzel', serif;
         }
@@ -205,8 +204,46 @@
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-8 text-center reveal">Past Events</h3>
                     
-                    <!-- Beat The Boss Saga -->
+                    <!-- Other Highlights -->
                     <div class="mb-16">
+                         <div class="max-w-4xl mx-auto flex flex-col gap-8">
+                            <!-- Chess Workshop Card -->
+                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col md:flex-row h-full">
+                                <div class="relative h-48 md:h-auto md:w-1/2 w-full overflow-hidden" id="workshop-slider">
+                                    <div class="flex transition-transform duration-500 ease-in-out h-full">
+                                        <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop1.JPG" class="w-full h-full object-cover flex-shrink-0">
+                                        <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop2.JPG" class="w-full h-full object-cover flex-shrink-0">
+                                        <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop3.JPG" class="w-full h-full object-cover flex-shrink-0">
+                                    </div>
+                                </div>
+                                <div class="p-6 flex-grow md:w-1/2">
+                                    <h4 class="text-xl font-bold text-white mt-2">Chess Workshop</h4>
+                                    <p class="text-gray-400 mt-2">A hands-on workshop covering key strategies and techniques for players of all levels.</p>
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <!-- Intra Sports Card -->
+                                <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                   <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">OCTOBER 2024</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">Intra Sports - Chess</h4>
+                                        <p class="text-gray-400 mt-2">Chess Arena proudly handled the chess tournament for RV University's intra-sports competition.</p>
+                                    </div>
+                                </div>
+                                <!-- World of Chess Card -->
+                                <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                    <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">JULY 20th, 2025</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">World Of Chess</h4>
+                                        <p class="text-gray-400 mt-2">An online tournament celebrating World Chess Day with rapid, blitz, and bullet formats.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beat The Boss Saga -->
+                    <div>
                         <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">The 'Beat The Boss' Saga</h4>
                         <div class="grid md:grid-cols-3 gap-8">
                             <!-- Event Card: BTB 3.0 -->
@@ -241,18 +278,6 @@
                                  <div class="p-6 pt-0 mt-auto">
                                     <a href="https://www.instagram.com/p/C8JSzn-IXm3/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other Past Events -->
-                    <div>
-                        <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">Other Highlights</h4>
-                         <div class="max-w-md mx-auto bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col">
-                            <div class="p-6 flex-grow">
-                                <p class="text-amber-500 text-sm font-semibold">OCTOBER 2024</p>
-                                <h4 class="text-xl font-bold text-white mt-2">Intra Sports - Chess</h4>
-                                <p class="text-gray-400 mt-2">Chess Arena proudly handled the chess tournament for RV University's intra-sports competition.</p>
                             </div>
                         </div>
                     </div>
@@ -419,17 +444,28 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        // Optional: unobserve after revealing
-                        // observer.unobserve(entry.target);
                     }
                 });
             }, {
-                threshold: 0.1 // Trigger when 10% of the element is visible
+                threshold: 0.1
             });
 
             revealElements.forEach(el => {
                 observer.observe(el);
             });
+
+            // --- Workshop Image Slider ---
+            const slider = document.querySelector('#workshop-slider > div');
+            if (slider) {
+                const images = slider.children;
+                const imageCount = images.length;
+                let currentIndex = 0;
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % imageCount;
+                    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }, 4000); // Change image every 4 seconds
+            }
         });
     </script>
 
