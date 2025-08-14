@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Arena - RV University Chess Club</title>
     
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts (Inter and Cinzel) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -66,16 +64,13 @@
 </head>
 <body class="bg-gray-900 text-gray-200">
 
-    <!-- =========== Header =========== -->
     <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Club Logo and Name -->
             <a href="#home" class="flex items-center space-x-3">
                 <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/The%20logo.jpg" alt="Chess Arena Logo" class="h-10 w-10 rounded-full object-cover">
                 <span class="text-xl font-bold text-white">Chess Arena</span>
             </a>
             
-            <!-- Desktop Navigation -->
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
                 <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
@@ -83,7 +78,6 @@
                 <a href="#join" class="text-gray-300 hover:text-white transition duration-300">Join Us</a>
             </nav>
 
-            <!-- Mobile Menu Button -->
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -91,7 +85,6 @@
             </button>
         </div>
         
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
             <a href="#home" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Home</a>
             <a href="#about" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">About Us</a>
@@ -101,26 +94,19 @@
     </header>
 
     <main>
-        <!-- =========== Hero Section =========== -->
         <section id="home" class="relative min-h-screen flex flex-col justify-center items-center pt-24 pb-12 px-6 text-center overflow-hidden">
             
-            <!-- Blurred Background Layer -->
             <div class="absolute inset-0 w-full h-full bg-cover bg-center blur-lg scale-110" style="background-image: url('https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/The%20banner.png');"></div>
             
-            <!-- Dark Overlay for Readability -->
             <div class="absolute inset-0 w-full h-full bg-gray-900/60"></div>
 
-            <!-- Content Layer -->
             <div class="relative z-10 flex flex-col justify-center items-center h-full">
-                <!-- Main Title with Animation and new Font -->
                 <h1 class="text-5xl md:text-8xl font-bold text-white hero-title font-cinzel tracking-wider" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
                     Chess Arena
                 </h1>
 
-                <!-- Hero Text Content with Animation -->
                 <div class="hero-text">
                      <p class="text-lg md:text-2xl text-gray-200 mt-6 mb-8 max-w-3xl mx-auto">The Official Chess Club of RV University. Sharpen Your Mind, Make Your Move.</p>
-                     <!-- Button Container -->
                      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="#about" class="bg-amber-500 text-white font-bold py-3 px-8 rounded-full hover:bg-amber-600 transition-transform duration-300 hover:scale-105 text-lg w-full sm:w-auto">
                             Explore The Club
@@ -133,7 +119,6 @@
             </div>
         </section>
 
-        <!-- =========== About Us Section =========== -->
         <section id="about" class="py-20 bg-gray-800">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 reveal">
@@ -146,7 +131,6 @@
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <!-- Feature 1 -->
                     <div class="bg-gray-900 p-8 rounded-lg reveal">
                         <div class="flex justify-center mb-4">
                             <div class="bg-amber-500/10 p-4 rounded-full">
@@ -156,7 +140,6 @@
                         <h3 class="text-xl font-bold text-white mb-2">Meetups & Casual Play</h3>
                         <p class="text-gray-400">Join our sessions to play, learn, and connect with fellow enthusiasts.</p>
                     </div>
-                    <!-- Feature 2 -->
                     <div class="bg-gray-900 p-8 rounded-lg reveal">
                         <div class="flex justify-center mb-4">
                            <div class="bg-amber-500/10 p-4 rounded-full">
@@ -166,7 +149,6 @@
                         <h3 class="text-xl font-bold text-white mb-2">Tournaments & Series</h3>
                         <p class="text-gray-400">Test your skills in our exciting blitz, rapid, and classical tournaments.</p>
                     </div>
-                    <!-- Feature 3 -->
                     <div class="bg-gray-900 p-8 rounded-lg reveal">
                         <div class="flex justify-center mb-4">
                            <div class="bg-amber-500/10 p-4 rounded-full">
@@ -180,28 +162,24 @@
             </div>
         </section>
 
-        <!-- =========== Events Section =========== -->
-        <section id="events" class="py-20 bg-gray-800">
+        <section id="events" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Club Happenings</h2>
                     <p class="text-amber-500 mt-2">Our Main Event Series & More</p>
                 </div>
 
-                <!-- Upcoming Events -->
                 <div class="mb-20">
                     <h3 class="text-2xl font-bold text-white mb-8 text-center reveal">Upcoming Events</h3>
                     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        <!-- Event Card: BTB 4.0 -->
-                        <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col border border-amber-500/50 shadow-lg shadow-amber-500/10">
+                        <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col border border-amber-500/50 shadow-lg shadow-amber-500/10">
                             <div class="p-6 flex-grow">
                                 <p class="text-amber-500 text-sm font-semibold">COMING SOON</p>
                                 <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 4.0</h4>
                                 <p class="text-gray-400 mt-2">The legendary series returns. Stay tuned for your next chance to challenge the boss!</p>
                             </div>
                         </div>
-                        <!-- Event Card: Intra Sports 2025 -->
-                        <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col border border-amber-500/50 shadow-lg shadow-amber-500/10">
+                        <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col border border-amber-500/50 shadow-lg shadow-amber-500/10">
                             <div class="p-6 flex-grow">
                                 <p class="text-amber-500 text-sm font-semibold">OCTOBER 2025</p>
                                 <h4 class="text-xl font-bold text-white mt-2">Intra Sports - Chess 2025</h4>
@@ -211,15 +189,12 @@
                     </div>
                 </div>
 
-                <!-- Past Events -->
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-8 text-center reveal">Past Events</h3>
                     
-                    <!-- Other Highlights -->
-                    <div class="mb-16">
-                         <div class="max-w-4xl mx-auto flex flex-col gap-8">
-                            <!-- Chess Workshop Card -->
-                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col md:flex-row h-full">
+                    <div class="max-w-4xl mx-auto flex flex-col gap-16">
+                        <div class="flex flex-col gap-8">
+                            <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col md:flex-row h-full">
                                 <div class="relative h-48 md:h-auto md:w-1/2 w-full overflow-hidden" id="workshop-slider">
                                     <div class="flex transition-transform duration-500 ease-in-out h-full">
                                         <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop1.JPG" class="w-full h-full object-cover flex-shrink-0">
@@ -232,62 +207,66 @@
                                     <p class="text-gray-400 mt-2">A hands-on workshop covering key strategies and techniques for players of all levels.</p>
                                 </div>
                             </div>
-                            <div class="grid md:grid-cols-2 gap-8">
-                                <!-- Intra Sports Card -->
-                                <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
                                    <div class="p-6 flex-grow">
                                         <p class="text-amber-500 text-sm font-semibold">OCTOBER 2024</p>
                                         <h4 class="text-xl font-bold text-white mt-2">Intra Sports - Chess 2024</h4>
                                         <p class="text-gray-400 mt-2">Chess Arena proudly handled the chess tournament for RV University's intra-sports competition.</p>
                                     </div>
                                 </div>
-                                <!-- World of Chess Card -->
-                                <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
                                     <div class="p-6 flex-grow">
-                                        <p class="text-amber-500 text-sm font-semibold">JULY 21st, 2025</p>
+                                        <p class="text-amber-500 text-sm font-semibold">JULY 20th, 2025</p>
                                         <h4 class="text-xl font-bold text-white mt-2">World Of Chess</h4>
                                         <p class="text-gray-400 mt-2">An online tournament celebrating World Chess Day with rapid, blitz, and bullet formats.</p>
                                     </div>
                                 </div>
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                    <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">NOVEMBER 2024</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">RV University Sante</h4>
+                                        <p class="text-gray-400 mt-2">We shared our passion and played chess with fellow students exploring the various club stalls.</p>
+                                    </div>
+                                    <div class="p-6 pt-0 mt-auto">
+                                        <a href="https://www.instagram.com/p/DM2qg3yRpxK/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Beat The Boss Saga -->
-                    <div>
-                        <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">The 'Beat The Boss' Saga</h4>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <!-- Event Card: BTB 3.0 -->
-                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
-                                <div class="p-6 flex-grow">
-                                    <p class="text-amber-500 text-sm font-semibold">3rd FEB 2025</p>
-                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 3.0</h4>
-                                    <p class="text-gray-400 mt-2">The ultimate chess challenge where challengers attempted to outsmart the master.</p>
+                        <div>
+                            <h4 class="text-xl md:text-2xl font-bold text-amber-500 font-cinzel tracking-wider text-center mb-8 reveal">The 'Beat The Boss' Saga</h4>
+                            <div class="grid md:grid-cols-3 gap-8">
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                    <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">3rd FEB 2025</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 3.0</h4>
+                                        <p class="text-gray-400 mt-2">The ultimate chess challenge where challengers attempted to outsmart the master.</p>
+                                    </div>
+                                    <div class="p-6 pt-0 mt-auto">
+                                        <a href="https://www.instagram.com/p/DF-cscstNu2/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                    </div>
                                 </div>
-                                <div class="p-6 pt-0 mt-auto">
-                                    <a href="https://www.instagram.com/p/DF-cscstNu2/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                    <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">12th AUG 2024</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 2.0</h4>
+                                        <p class="text-gray-400 mt-2">The second installment of our thrilling simultaneous chess exhibition.</p>
+                                    </div>
+                                    <div class="p-6 pt-0 mt-auto">
+                                        <a href="https://www.instagram.com/p/C-ktX3mylgl/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <!-- Event Card: BTB 2.0 -->
-                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
-                                <div class="p-6 flex-grow">
-                                    <p class="text-amber-500 text-sm font-semibold">12th AUG 2024</p>
-                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss 2.0</h4>
-                                    <p class="text-gray-400 mt-2">The second installment of our thrilling simultaneous chess exhibition.</p>
-                                </div>
-                                <div class="p-6 pt-0 mt-auto">
-                                    <a href="https://www.instagram.com/p/C-ktX3mylgl/?img_index=1" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
-                                </div>
-                            </div>
-                            <!-- Event Card: BTB 1.0 -->
-                            <div class="bg-gray-900 rounded-lg overflow-hidden reveal flex flex-col h-full">
-                                <div class="p-6 flex-grow">
-                                    <p class="text-amber-500 text-sm font-semibold">7th FEB 2024</p>
-                                    <h4 class="text-xl font-bold text-white mt-2">Beat The Boss</h4>
-                                    <p class="text-gray-400 mt-2">Where it all began! The first-ever edition of our main event series.</p>
-                                </div>
-                                 <div class="p-6 pt-0 mt-auto">
-                                    <a href="https://www.instagram.com/p/C8JSzn-IXm3/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                <div class="bg-gray-800 rounded-lg overflow-hidden reveal flex flex-col h-full">
+                                    <div class="p-6 flex-grow">
+                                        <p class="text-amber-500 text-sm font-semibold">7th FEB 2024</p>
+                                        <h4 class="text-xl font-bold text-white mt-2">Beat The Boss</h4>
+                                        <p class="text-gray-400 mt-2">Where it all began! The first-ever edition of our main event series.</p>
+                                    </div>
+                                     <div class="p-6 pt-0 mt-auto">
+                                        <a href="https://www.instagram.com/p/C8JSzn-IXm3/" target="_blank" rel="noopener noreferrer" class="text-amber-500 hover:text-amber-400 font-semibold">View Post &rarr;</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -295,31 +274,26 @@
                 </div>
             </div>
         </section>
-
-        <!-- =========== Why Join Us Section =========== -->
-        <section id="join" class="py-20 bg-gray-900">
+        
+        <section id="join" class="py-20 bg-gray-800">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12 reveal">
                     <h2 class="text-3xl md:text-4xl font-bold text-white">Why Join Chess Arena?</h2>
                     <p class="text-amber-500 mt-2">The Perks of Being a Member</p>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Benefit 1 -->
                     <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
                         <h3 class="text-xl font-bold text-white mb-2">All Levels Welcome</h3>
                         <p class="text-gray-400">From Grandmaster in the making to your very first game, we have a place for you.</p>
                     </div>
-                    <!-- Benefit 2 -->
                     <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
                         <h3 class="text-xl font-bold text-white mb-2">Compete & Grow</h3>
                         <p class="text-gray-400">Compete in internal tournaments and get a chance to represent RV University at state & national events.</p>
                     </div>
-                    <!-- Benefit 3 -->
                     <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
                         <h3 class="text-xl font-bold text-white mb-2">Learn from the Best</h3>
                         <p class="text-gray-400">Participate in workshops and analysis sessions led by experienced players.</p>
                     </div>
-                    <!-- Benefit 4 -->
                     <div class="border border-gray-700 p-8 rounded-lg text-center reveal">
                         <h3 class="text-xl font-bold text-white mb-2">Join the Community</h3>
                         <p class="text-gray-400">Meet new friends, find practice partners, and be part of a thriving campus club.</p>
@@ -328,14 +302,12 @@
             </div>
         </section>
 
-        <!-- =========== Footer / CTA Section =========== -->
-        <footer class="bg-gray-800">
+        <footer class="bg-gray-900">
             <div class="container mx-auto px-6 py-12 text-center">
                 <div class="reveal">
                     <h2 class="text-3xl font-bold text-white">Ready to Make Your Move?</h2>
                     <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Become a member of Chess Arena today. Click the button below to fill out our registration form and join the community!</p>
                     <div class="mt-8">
-                        <!-- Google Form Link Updated -->
                         <a href="https://forms.gle/qw2YU9icgM6jnT9X8" target="_blank" rel="noopener noreferrer" class="bg-amber-500 text-white font-bold py-4 px-10 rounded-full hover:bg-amber-600 transition duration-300 text-lg">
                             Join Us Now
                         </a>
@@ -345,7 +317,6 @@
                 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
                     <p class="text-gray-500 mb-4 sm:mb-0">&copy; 2025 Chess Arena - RV University. All Rights Reserved.</p>
                     <div class="flex space-x-6">
-                        <!-- Social Media Links Updated -->
                         <a href="https://www.instagram.com/chess_arena.rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </a>
@@ -361,7 +332,6 @@
         </footer>
     </main>
 
-    <!-- Event Details Modal -->
     <div id="event-modal" class="fixed inset-0 bg-black/70 z-50 hidden items-center justify-center p-4">
         <div id="event-modal-content" class="bg-gray-800 rounded-lg p-8 max-w-md w-full relative transform transition-all duration-300 scale-95 opacity-0">
             <button id="event-modal-close" class="absolute top-4 right-4 text-gray-400 hover:text-white">
@@ -481,4 +451,4 @@
     </script>
 
 </body>
-</html>
+</html
