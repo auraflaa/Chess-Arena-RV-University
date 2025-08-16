@@ -75,11 +75,12 @@
                 <a href="#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
                 <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
                 <a href="#events" class="text-gray-300 hover:text-white transition duration-300">Events</a>
+                <a href="media.html" class="text-gray-300 hover:text-white transition duration-300">Media</a>
                 <a href="#join" class="text-gray-300 hover:text-white transition duration-300">Join Us</a>
             </nav>
 
             <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
@@ -89,6 +90,7 @@
             <a href="#home" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Home</a>
             <a href="#about" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">About Us</a>
             <a href="#events" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Events</a>
+            <a href="media.html" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Media</a>
             <a href="#join" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Join Us</a>
         </div>
     </header>
@@ -315,7 +317,10 @@
                 </div>
                 
                 <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
-                    <p class="text-gray-500 mb-4 sm:mb-0">&copy; 2025 Chess Arena - RV University. All Rights Reserved.</p>
+                    <div class="text-gray-500 mb-4 sm:mb-0 text-center sm:text-left">
+                        <span>&copy; 2025 Chess Arena - RV University.</span>
+                        <a href="media.html" class="ml-4 hover:text-amber-500 transition">Media Gallery</a>
+                    </div>
                     <div class="flex space-x-6">
                         <a href="https://www.instagram.com/chess_arena.rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
@@ -351,17 +356,21 @@
                     e.preventDefault();
 
                     const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+                    if (targetId.startsWith('#')) {
+                        const targetElement = document.querySelector(targetId);
 
-                    if (targetElement) {
-                        const header = document.querySelector('header');
-                        const headerHeight = header ? header.offsetHeight : 0;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        if (targetElement) {
+                            const header = document.querySelector('header');
+                            const headerHeight = header ? header.offsetHeight : 0;
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
 
-                        window.scrollTo({
-                            top: targetPosition,
-                            behavior: 'smooth'
-                        });
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    } else {
+                        window.location.href = targetId;
                     }
                 });
             });
@@ -451,4 +460,4 @@
     </script>
 
 </body>
-</html
+</html>
