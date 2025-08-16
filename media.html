@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Hub - Chess Arena</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter and Cinzel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* --- Carousel Styles --- */
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+        .scrolling-wrapper .scrolling-content {
+            animation: scroll 60s linear infinite;
+        }
+        .scrolling-wrapper:hover .scrolling-content {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- =========== Header =========== -->
+    <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Club Logo and Name -->
+            <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#home" class="flex items-center space-x-3">
+                <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/The%20logo.jpg" alt="Chess Arena Logo" class="h-10 w-10 rounded-full object-cover">
+                <span class="text-xl font-bold text-white">Chess Arena</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#home" class="text-gray-300 hover:text-white transition duration-300">Home</a>
+                <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
+                <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#events" class="text-gray-300 hover:text-white transition duration-300">Events</a>
+                <a href="media.html" class="text-amber-500 font-bold transition duration-300">Media</a>
+                <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#join" class="text-gray-300 hover:text-white transition duration-300">Join Us</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#home" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Home</a>
+            <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#about" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">About Us</a>
+            <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#events" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Events</a>
+            <a href="media.html" class="block py-2 px-6 text-sm text-amber-500 bg-gray-700">Media</a>
+            <a href="https://auraflaa.github.io/Chess-Arena-RV-University/#join" class="block py-2 px-6 text-sm text-gray-300 hover:bg-gray-700">Join Us</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========== Media Section =========== -->
+        <section id="media" class="py-28 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Media Hub</h2>
+                    <p class="text-amber-500 mt-2">Resources & Gallery</p>
+                </div>
+                
+                <!-- Recommended Books -->
+                <div class="mb-20">
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center">Recommended Chess Books</h3>
+                    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                        <!-- Book 1 -->
+                        <div class="bg-gray-800 p-6 rounded-lg text-center flex flex-col">
+                            <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/Chess%20Books/My%20System%20%26%20Chess%20Praxis.jpg" alt="My System Book Cover" class="w-48 h-auto mx-auto mb-4 rounded shadow-lg">
+                            <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-white">My System</h4>
+                                <p class="text-gray-400 text-sm mb-2">by Aron Nimzowitsch</p>
+                                <p class="text-gray-500">A timeless classic on positional chess strategy.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="https://www.amazon.in/System-Chess-Praxis-Aron-Nimzowitsch/dp/9056916599?crid=1OYWBXYHXC1UJ&dib=eyJ2IjoiMSJ9.qcGC70dEFX4-TdRDUhJToEMAEvqAYjipqs04h-yaV84.eOEHjjkZy0HXs_FwcArt6Z2aXm19OPPcv22xbqjZAIQ&dib_tag=se&keywords=my+system+and+chess+praxis&qid=1755337399&sprefix=My+system+n+chess%2Caps%2C245&sr=8-1&linkCode=ll1&tag=chessarenaweb-21&linkId=eab5d25885856ca5f0aaa2955b6e106e&language=en_IN&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="bg-amber-500 text-white font-bold py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300">
+                                    Find Book
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Book 2 -->
+                        <div class="bg-gray-800 p-6 rounded-lg text-center flex flex-col">
+                            <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/Chess%20Books/Bobby%20Fischer%20Teaches%20Chess.jpg" alt="Bobby Fischer Teaches Chess Book Cover" class="w-48 h-auto mx-auto mb-4 rounded shadow-lg">
+                             <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-white">Bobby Fischer Teaches Chess</h4>
+                                <p class="text-gray-400 text-sm mb-2">by Bobby Fischer</p>
+                                <p class="text-gray-500">The perfect starting point for absolute beginners.</p>
+                            </div>
+                             <div class="mt-4">
+                                <a href="https://www.amazon.in/Bobby-Fischer-Teaches-Chess/dp/0553263153?crid=2M4QWLDHKGT74&dib=eyJ2IjoiMSJ9.GIJ5JGXW_sppUqin4YCNIUYYUFsQT1751eyYRuG0kl9rtfRq8WcNV8rZNIJ6ppYZBlQpSPdqe6y1PGSNoJKeEJSPbyGB_OQwfOXg9i2mGSZ-fRw13xO7SJIqSJtFz8zj.WhQ1sM_JLqwLxc-62tFPpUYzEFk3tzpsZyPuqceZtPk&dib_tag=se&keywords=Bobby_Fischer_Teaches_Chess_-_Bobby_Fischer_Bobby_Fischer_and_Stuart_Margulies&qid=1755337229&sprefix=bobby_fischer_teaches_chess_-_bobby_fischer_bobby_fischer_and_stuart_margulies%2Caps%2C600&sr=8-1&linkCode=ll1&tag=chessarenaweb-21&linkId=2903d1f301a29da0f94c49e0e77c8b88&language=en_IN&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="bg-amber-500 text-white font-bold py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300">
+                                    Find Book
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Book 3 -->
+                        <div class="bg-gray-800 p-6 rounded-lg text-center flex flex-col">
+                            <img src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/Chess%20Books/Silmans%20Complete%20Endgame%20Course.jpg" alt="Silman's Complete Endgame Course Book Cover" class="w-48 h-auto mx-auto mb-4 rounded shadow-lg">
+                             <div class="flex-grow">
+                                <h4 class="text-xl font-bold text-white">Silman's Complete Endgame Course</h4>
+                                <p class="text-gray-400 text-sm mb-2">by Jeremy Silman</p>
+                                <p class="text-gray-500">Master the endgame, from beginner to master.</p>
+                            </div>
+                             <div class="mt-4">
+                                <a href="https://www.amazon.in/Silmans-Complete-Endgame-Course-Beginner/dp/1890085103?crid=3CV7GMDET1XAZ&dib=eyJ2IjoiMSJ9.3xqCp_OgxA7hNM3a8mi1xvJLzd1Q6YYay6eokhuXXdc.tED5b3GG2Xw_W4iSaNENglvCkGZFTEnVCRAPkqqbFto&dib_tag=se&keywords=Silmans_Complete_Endgame_Course_-_Jeremy_Silman&qid=1755337496&sprefix=silmans_complete_endgame_course_-_jeremy_silman%2Caps%2C470&sr=8-1&linkCode=ll1&tag=chessarenaweb-21&linkId=d4839e9c2d60205856dbae9e54649dbe&language=en_IN&ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer" class="bg-amber-500 text-white font-bold py-2 px-4 rounded-full hover:bg-amber-600 transition duration-300">
+                                    Find Book
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Gallery -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-8 text-center">Event Gallery</h3>
+                    <div class="scrolling-wrapper w-full overflow-hidden relative" style="mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);">
+                        <div class="scrolling-content flex w-max">
+                            <!-- Original Images -->
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop1.JPG" alt="Chess workshop photo 1">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop2.JPG" alt="Chess workshop photo 2">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop3.JPG" alt="Chess workshop photo 3">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/RVU_Sante.jpg" alt="RVU Sante event photo 1">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/RVU_Sante2.jpg" alt="RVU Sante event photo 2">
+                            <!-- Duplicate Images for seamless loop -->
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop1.JPG" alt="Chess workshop photo 1">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop2.JPG" alt="Chess workshop photo 2">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/chessworkshop3.JPG" alt="Chess workshop photo 3">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/RVU_Sante.jpg" alt="RVU Sante event photo 1">
+                            <img class="h-56 max-w-none rounded-lg mx-4" src="https://raw.githubusercontent.com/auraflaa/Chess-Arena-RV-University/main/RVU_Sante2.jpg" alt="RVU Sante event photo 2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========== Footer =========== -->
+    <footer class="bg-gray-800">
+        <div class="container mx-auto px-6 py-12 text-center">
+            <div class="mt-12 border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 sm:mb-0">&copy; 2025 Chess Arena - RV University. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/chess_arena.rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chess-arena-rvu/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <a href="mailto:chessarena.rv@gmail.com" class="text-gray-400 hover:text-white transition">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Mobile Menu Toggle ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
